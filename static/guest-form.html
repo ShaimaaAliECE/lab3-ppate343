@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doodle App</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1> Welcome to the Doodle App </h1> 
-    <a href= '/login'>Login as admin</a>
-    <a href= '/doodlePage'>Continue to Doodle page as guest </a>
+    <form action='/guest' method='get'>
+        Enter your name: 
+        <input name= 'name' type='text' />
+        <input type="submit"/>
+    </form>
 </body>
 </html>
