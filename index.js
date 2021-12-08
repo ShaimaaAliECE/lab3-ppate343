@@ -38,7 +38,7 @@ app.get('/DoodlePage', (req,res) => {
     res.sendFile(__dirname + "/static/addGuest.html"); 
    });
 
-   app.get('/History', (req,res) => {
+   //app.get('/History', (req,res) => {
 
 
 
@@ -48,8 +48,8 @@ app.get('/DoodlePage', (req,res) => {
 
 
 
-    res.sendFile(__dirname + "/static/History.html"); 
-   });
+   // res.sendFile(__dirname + "/static/History.html"); 
+//   });
 
  app.get('/Guest', (req, res)=> {
 
