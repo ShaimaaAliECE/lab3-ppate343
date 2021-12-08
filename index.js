@@ -48,39 +48,39 @@ app.get('/DoodlePage', (req,res) => {
 
 
 
-    //res.sendFile(__dirname + "/static/History.html"); 
+    res.sendFile(__dirname + "/static/History.html"); 
    });
 
-// app.get('/Guest', (req, res)=> {
+ app.get('/Guest', (req, res)=> {
 
-//     let conn=newConnection();
-//     conn.connect();
-//     let Users;
-//     conn.query(`select * from Schedule`, (err,rows,fields) => {
+     let conn=newConnection();
+     conn.connect();
+     let Users;
+    conn.query(`select * from Schedule`, (err,rows,fields) => {
 
-//         if (err)
-//             response.send('ERROR: ' +err)
-//         else
-//         {
-//             Users = rows;
+         if (err)
+             response.send('ERROR: ' +err)
+         else
+         {
+             Users = rows;
 
-//             let content ='';
-//             for (u of Users)
-//             {
-//                 content += '<div>';
-//                 content += p.Description + ":" + p.Price 
-//                 content += ` <a href='/prod-img?path=${p.imgPath}&desc=${p.description}'> See Image</a>`
-//                 content += '</div>'
-//                 content += '\n';
-//             }
+             let content ='';
+             for (u of Users)
+             {
+                 content += '<div>';
+                 content += p.Description + ":" + p.Price 
+                 content += ` <a href='/prod-img?path=${p.imgPath}&desc=${p.description}'> See Image</a>`
+                 content += '</div>'
+                 content += '\n';
+             }
 
-//             response.send(content);
-//         }
-//     })    
+           response.send(content);
+         }
+     })    
 
-//     conn.end();
-// res.send(req.query.name + " was added to doodle app guests"); 
-// });
+     conn.end();
+ res.send(req.query.name + " was added to doodle app guests"); 
+ });
 
 app.get('/History', (request, response) => {
     let conn=newConnection();
